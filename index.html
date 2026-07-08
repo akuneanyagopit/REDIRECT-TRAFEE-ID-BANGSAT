@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Streaming</title>
+
+<meta name="description" content="Access a private streaming session.">
+<meta property="og:title" content="Private Streaming">
+<meta property="og:description" content="Click to continue.">
+<meta property="og:type" content="website">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:white;
+}
+
+.bg{
+position:absolute;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle,#3b82f655 2px,transparent 3px);
+background-size:70px 70px;
+animation:move 18s linear infinite;
+opacity:.35;
+}
+
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(-70px,-70px);}
+}
+
+.card{
+position:relative;
+z-index:2;
+width:92%;
+max-width:420px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+padding:35px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.logo{
+font-size:60px;
+margin-bottom:15px;
+}
+
+h1{
+font-size:30px;
+margin-bottom:10px;
+}
+
+p{
+opacity:.9;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.progress{
+height:10px;
+background:#ffffff22;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.bar{
+height:100%;
+width:0%;
+background:#22c55e;
+animation:loading 5s linear forwards;
+}
+
+@keyframes loading{
+to{
+width:100%;
+}
+}
+
+.count{
+font-size:18px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:999px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+<div class="logo">🎬</div>
+
+<h1>Private Streaming Live Free🥵🔥</h1>
+
+<p>
+Preparing your secure streaming session...
+Please wait while we connect you.
+</p>
+
+<div class="progress">
+<div class="bar"></div>
+</div>
+
+<div class="count">
+Redirecting in <span id="timer">3</span>s
+</div>
+
+<a class="btn" id="continueBtn" href="#">
+Continue Now
+</a>
+
+<div class="footer">
+Secure Connection • Fast Access
+</div>
+
+</div>
+
+<script>
+const OFFER_URL = "https://dgcbjcf.lnkks.com/p/p1oDY";
+
+document.getElementById("continueBtn").href = OFFER_URL;
+
+let time = 3;
+
+const timer = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+time--;
+timer.textContent = time;
+
+if(time <= 0){
+clearInterval(countdown);
+window.location.href = OFFER_URL;
+}
+},1000);
+</script>
+
+</body>
+  </html>
